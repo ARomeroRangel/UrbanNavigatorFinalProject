@@ -85,9 +85,13 @@
                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                          <div class="home-info">
                               <h3>Members.aspx</h3>
-<%--                              <h1>Relocate with Insight, Decide with Confidence - Where Cost Meets Safety!</h1>--%>
                              <!-- Registration  User Control -->
-                            <cse:citycompare runat="server" />
+                             <asp:ScriptManager ID="ScriptManager5" runat="server"></asp:ScriptManager>
+                             <asp:UpdatePanel ID="UpdatePanel5" runat="server">
+                                 <ContentTemplate>
+                                     <cse:citycompare runat="server" />
+                                 </ContentTemplate>
+                             </asp:UpdatePanel>
                              <!-- Registration  User Control -->
                          </div>
                     </div>

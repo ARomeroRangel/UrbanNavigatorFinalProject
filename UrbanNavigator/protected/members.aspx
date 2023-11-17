@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="members.aspx.cs" Inherits="UrbanNavigator.WebForm1" %>
 <%@ Register TagPrefix="cse" TagName="registration" Src="~/usercontrols/registration.ascx"%>
+<%@ Register TagPrefix="cse" TagName="citycompare" Src="~/armandoServices/citycompare.ascx"%>
 
 <!DOCTYPE html>
 
@@ -86,7 +87,7 @@
                               <h3>Members.aspx</h3>
 <%--                              <h1>Relocate with Insight, Decide with Confidence - Where Cost Meets Safety!</h1>--%>
                              <!-- Registration  User Control -->
-                            
+                            <cse:citycompare runat="server" />
                              <!-- Registration  User Control -->
                          </div>
                     </div>

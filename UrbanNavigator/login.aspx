@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="UrbanNavigator.WebForm1" %>
 <%@ Register TagPrefix="cse" TagName="registration" Src="~/usercontrols/registration.ascx"%>
+<%@ Register TagPrefix="cse" TagName="loginform" Src="~/usercontrols/loginform.ascx" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -79,10 +80,10 @@
 
                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                          <div class="home-info">
-                              <h3>Log In</h3>
-<%--                              <h1>Relocate with Insight, Decide with Confidence - Where Cost Meets Safety!</h1>--%>
+                             
+
                              <!-- Registration  User Control -->
-                            
+                            <cse:loginform runat="server" />
                              <!-- Registration  User Control -->
                          </div>
                     </div>

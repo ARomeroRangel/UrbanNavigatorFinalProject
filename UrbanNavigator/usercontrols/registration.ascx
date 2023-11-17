@@ -5,7 +5,7 @@
 <asp:TextBox CssClass="textbox" ID="lastname" runat="server" placeholder="LastName" ></asp:TextBox><br />
 <asp:TextBox CssClass="textbox" ID="username" runat="server" placeholder="UserName"></asp:TextBox><br />
 <asp:TextBox CssClass="textbox" ID="email" runat="server" placeholder="Email"></asp:TextBox><br />
-<asp:TextBox CssClass="textbox" ID="password" runat="server" placeholder="Password"></asp:TextBox><br />
+<asp:TextBox CssClass="textbox" ID="password" textmode="Password" runat="server" placeholder="Password"></asp:TextBox><br />
 
 <br />
 <br />

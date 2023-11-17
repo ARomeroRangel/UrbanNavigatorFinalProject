@@ -32,7 +32,15 @@
 </head>
 <body>
 
-  
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
 
      <!-- MENU -->
      <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
@@ -73,15 +81,14 @@
           <div class="overlay"></div>
           <div class="container">
                <div class="row">
-                  
+
                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                          <div class="home-info">
-                              <h3>Members Services</h3>
+                              <h3>Members.aspx</h3>
                              <!-- Registration  User Control -->
                              <asp:ScriptManager ID="ScriptManager5" runat="server"></asp:ScriptManager>
                              <asp:UpdatePanel ID="UpdatePanel5" runat="server">
                                  <ContentTemplate>
-                                     <h3>Comparison of Two Cities</h3>
                                      <cse:citycompare runat="server" />
                                  </ContentTemplate>
                              </asp:UpdatePanel>

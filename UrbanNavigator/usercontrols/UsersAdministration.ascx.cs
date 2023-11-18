@@ -172,7 +172,7 @@ namespace UrbanNavigator.usercontrols
             }
 
             // Redirect to the desired page
-            Response.Redirect("~/admin/administrator.aspx");
+            Response.Redirect("../protected/administrator.aspx");
 
         }
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)

@@ -80,17 +80,11 @@
 
                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                          <div class="home-info">
-                             <asp:ScriptManager ID="ScriptManager6" runat="server"></asp:ScriptManager>
-                             <asp:UpdatePanel ID="UpdatePane6" runat="server">
-                             <ContentTemplate>
+                             
+
                              <!-- Registration  User Control -->
                             <cse:loginform runat="server" />
                              <!-- Registration  User Control -->
-
-                             </ContentTemplate>
-
-                             </asp:UpdatePanel>
-
                          </div>
                     </div>
 

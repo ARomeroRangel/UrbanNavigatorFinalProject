@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="administrator.aspx.cs" Inherits="UrbanNavigator.WebForm1" %>
 <%@ Register TagPrefix="cse" TagName="userInfo" Src="~/usercontrols/UsersAdministration.ascx" %>
-<%@ Register TagPrefix="cse" TagName="logout" Src="~/usercontrols/logout.ascx" %>
 
 <!DOCTYPE html>
 
@@ -31,14 +30,7 @@
 
 </head>
 <body>
-    <!-- PRE LOADER -->
-<section class="preloader">
-     <div class="spinner">
 
-          <span class="spinner-rotate"></span>
-          
-     </div>
-</section>
      
 
 
@@ -67,13 +59,7 @@
                          <li><a href="#contact" class="smoothScroll">Contact</a></li>
                     </ul>--%>
                     <ul class="nav navbar-nav navbar-right">
-                      <li class="smoothScroll">
-                          <a >
-                            <%Response.Write("Hello " + Context.User.Identity.Name+",");%>
-                          </a>
-                      </li> 
-
-                         <li><cse:logout runat="server"/></cse:logout></li>
+                         <li><a href="#" class="smoothScroll">Logout</a></li>
                     </ul>
                     
                </div>

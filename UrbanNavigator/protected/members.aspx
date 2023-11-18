@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="members.aspx.cs" Inherits="UrbanNavigator.WebForm1" %>
 <%@ Register TagPrefix="cse" TagName="registration" Src="~/usercontrols/registration.ascx"%>
 <%@ Register TagPrefix="cse" TagName="citycompare" Src="~/armandoServices/citycompare.ascx"%>
-<%@ Register TagPrefix="cse" TagName="logout" Src="~/usercontrols/logout.ascx" %>
 
 <!DOCTYPE html>
 
@@ -10,16 +9,6 @@
     <title>Login</title>
 </head>
 <body>
-    <!-- PRE LOADER -->
-<section class="preloader">
-     <div class="spinner">
-
-          <span class="spinner-rotate"></span>
-          
-     </div>
-</section>
-
-
     <form id="form3" runat="server">
         <div>
             
@@ -44,7 +33,13 @@
 <body>
 
      <!-- PRE LOADER -->
-  
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
 
 
      <!-- MENU -->
@@ -72,12 +67,7 @@
                          <li><a href="#contact" class="smoothScroll">Contact</a></li>
                     </ul>--%>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="smoothScroll">
-                            <a >
-                              <%Response.Write("Hello " + Context.User.Identity.Name+",");%>
-                            </a>
-                        </li> 
-                         <li><cse:logout runat="server" /></li>
+                         <li><a href="#" class="smoothScroll">Logout</a></li>
                     </ul>
                     
                </div>
@@ -94,7 +84,7 @@
 
                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                          <div class="home-info">
-                              <h3>Members Services</h3>
+                              <h3>Members.aspx</h3>
                              <!-- Registration  User Control -->
                              <asp:ScriptManager ID="ScriptManager5" runat="server"></asp:ScriptManager>
                              <asp:UpdatePanel ID="UpdatePanel5" runat="server">

@@ -1,17 +1,17 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="loginform.ascx.cs" Inherits="UrbanNavigator.usercontrols.WebUserControl1" %>
 
+
    <center>
    <h3>username </h3>
    </center>
    
-   <asp:TextBox runat="server" ID="txt_Username" placeholder="Enter Username" onkeydown="return (event.keyCode!=13); "></asp:TextBox>
+   <asp:TextBox runat="server" ID="txt_Username" placeholder="Enter Username"></asp:TextBox>
    <center>
    <h3>passwpord </h3>
    </center>
-   <asp:TextBox runat="server" ID="txt_password" TextMode="Password" placeholder="Enter Password" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
-   <asp:Button runat="server" ID="btn_Login" CssClass="lgnbtn" Text="Login" OnClick="btn_Login_Click"  UseSubmitBehavior="False" />
-   <asp:Button ID="btn_cancel" CssClass="cnbtn" runat="server" Text="Cancel" OnClick="btn_cancel_Click" UseSubmitBehavior="False"  /><br />
-   <asp:Label ID="Label1" runat="server" style="color:red"></asp:Label>
+   <asp:TextBox runat="server" ID="txt_password" TextMode="Password" placeholder="Enter Password"></asp:TextBox>
+   <asp:Button runat="server" ID="btn_Login" CssClass="lgnbtn" Text="Login" OnClick="btn_Login_Click" />
+    <asp:Button ID="btn_cancel" CssClass="cnbtn" runat="server" Text="Cancel" OnClick="btn_cancel_Click" />
 
     
 
@@ -56,5 +56,5 @@
     </style>
 
 
-      <s
+      
          

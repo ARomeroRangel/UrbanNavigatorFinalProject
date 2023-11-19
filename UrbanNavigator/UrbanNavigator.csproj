@@ -166,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\cities.json" />
+    <Content Include="admin\Web.config" />
     <None Include="Connected Services\citycompareservice\configuration91.svcinfo" />
     <None Include="Connected Services\citycompareservice\configuration.svcinfo" />
     <None Include="Connected Services\citycompareservice\Reference.svcmap">
@@ -191,8 +192,9 @@
     <Content Include="js\jquery.stellar.min.js" />
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\smoothscroll.js" />
-    <Content Include="protected\administrator.aspx" />
+    <Content Include="admin\administrator.aspx" />
     <Content Include="protected\members.aspx" />
+    <Content Include="usercontrols\logout.ascx" />
     <Content Include="usercontrols\registration.ascx" />
     <Content Include="usercontrols\UsersAdministration.ascx" />
     <Content Include="usercontrols\loginform.ascx" />
@@ -227,11 +229,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="protected\administrator.aspx.cs">
+    <Compile Include="admin\administrator.aspx.cs">
       <DependentUpon>administrator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="protected\administrator.aspx.designer.cs">
+    <Compile Include="admin\administrator.aspx.designer.cs">
       <DependentUpon>administrator.aspx</DependentUpon>
     </Compile>
     <Compile Include="protected\members.aspx.cs">
@@ -240,6 +242,13 @@
     </Compile>
     <Compile Include="protected\members.aspx.designer.cs">
       <DependentUpon>members.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\logout.ascx.cs">
+      <DependentUpon>logout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrols\logout.ascx.designer.cs">
+      <DependentUpon>logout.ascx</DependentUpon>
     </Compile>
     <Compile Include="usercontrols\registration.ascx.cs">
       <DependentUpon>registration.ascx</DependentUpon>
@@ -271,6 +280,7 @@
     <Content Include="fonts\FontAwesome.otf" />
     <None Include="Connected Services\citycompareservice\Service1.wsdl" />
     <None Include="packages.config" />
+    <Content Include="protected\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

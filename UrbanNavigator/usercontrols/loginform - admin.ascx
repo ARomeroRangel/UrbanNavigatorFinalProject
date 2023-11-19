@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="loginform.ascx.cs" Inherits="UrbanNavigator.usercontrols.WebUserControl1" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="loginform-admin.ascx.cs" Inherits="UrbanNavigator.usercontrols.WebUserControl1" %>
 
    <center>
    <h3>username </h3>
@@ -9,8 +9,8 @@
    <h3>passwpord </h3>
    </center>
    <asp:TextBox runat="server" ID="txt_password" TextMode="Password" placeholder="Enter Password" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
-   <asp:Button runat="server" ID="btn_Login" CssClass="lgnbtn" Text="Login" OnClick="Btn_Login_Click"  UseSubmitBehavior="False" />
-   <asp:Button ID="btn_cancel" CssClass="cnbtn" runat="server" Text="Cancel" OnClick="Btn_cancel_Click" UseSubmitBehavior="False"  /><br />
+   <asp:Button runat="server" ID="btn_Login" CssClass="lgnbtn" Text="Login" OnClick="btn_Login_Click"  UseSubmitBehavior="False" />
+   <asp:Button ID="btn_cancel" CssClass="cnbtn" runat="server" Text="Cancel" OnClick="btn_cancel_Click" UseSubmitBehavior="False"  /><br />
    <asp:Label ID="Label1" runat="server" style="color:red"></asp:Label>
 
     

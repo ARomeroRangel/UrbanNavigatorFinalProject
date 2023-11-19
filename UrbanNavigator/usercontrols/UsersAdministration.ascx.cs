@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Hashing;
+using System;
 using System.Data;
 using System.IO;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using System.Xml.Linq;
-using Hashing;
 namespace UrbanNavigator.usercontrols
 {
     public partial class UsersAdministration : System.Web.UI.UserControl
@@ -23,14 +20,14 @@ namespace UrbanNavigator.usercontrols
                 // Call the method to bind XML data 
                 BindXmlDataToListBox();
             }
-           
+
 
 
         }
         private void BindXmlDataToListBox()
         {
             // Specify the path to your XML file
-            string fLocation = Server.MapPath("~/App_Data/user.xml");
+            string fLocation = Server.MapPath("~/App_Data/Members.xml");
 
             // Check if the file exists
             if (System.IO.File.Exists(fLocation))
@@ -60,7 +57,7 @@ namespace UrbanNavigator.usercontrols
                 userListBox.Items.RemoveAt(userListBox.SelectedIndex);
 
                 // Specify the path to your XML file
-                string fLocation = Server.MapPath("~/App_Data/user.xml");
+                string fLocation = Server.MapPath("~/App_Data/Members.xml");
 
                 // Load XML data into a ListBox
                 XDocument xDoc = XDocument.Load(fLocation);
@@ -82,17 +79,17 @@ namespace UrbanNavigator.usercontrols
 
                 // Save the modified XML back to the file
                 xDoc.Save(fLocation);
-                
+
             }
-           Response.Redirect("administrator.aspx");
+            Response.Redirect("administrator.aspx");
         }
 
-        protected void user_Click(object sender, EventArgs e)
+        protected void User_Click(object sender, EventArgs e)
         {
             try
             {
                 DataSet ds = new DataSet();
-                ds.ReadXml(Server.MapPath("~/App_Data/user.xml"));
+                ds.ReadXml(Server.MapPath("~/App_Data/Members.xml"));
                 MyDataGrid.DataSource = ds;
                 MyDataGrid.DataBind();
 
@@ -106,8 +103,8 @@ namespace UrbanNavigator.usercontrols
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string fLocation = Path.Combine(Request.PhysicalApplicationPath, @"App_Data\user.xml");
-         
+            string fLocation = Path.Combine(Request.PhysicalApplicationPath, @"App_Data\Members.xml");
+
             // Create a new user object
             var newUser = new
             {
@@ -115,60 +112,106 @@ namespace UrbanNavigator.usercontrols
                 LastName = lastname.Text,
                 Email = email.Text,
                 UserName = HashingUtils.HashString(username.Text),
-                Password = HashingUtils.HashString(password.Text) 
+                Password = HashingUtils.HashString(password.Text)
             };
 
             FileStream fS = null;
             try
             {
-                // Check if the file exists
-                if (File.Exists(fLocation))
+                if (CheckBox1.Checked == true)
                 {
-                    // Read existing XML data
-                    XDocument xDoc = XDocument.Load(fLocation);
+                    string AdminLocation = Path.Combine(Request.PhysicalApplicationPath, @"App_Data/Staff.xml");
+                    if (File.Exists(AdminLocation))
+                    {
+                        // Read existing XML data
+                        XDocument xDoc = XDocument.Load(AdminLocation);
 
-                    // Create a new user element
-                    XElement newUserElement = new XElement("User");
-                    newUserElement.Add(new XElement("FirstName", newUser.FirstName));
-                    newUserElement.Add(new XElement("LastName", newUser.LastName));
-                    newUserElement.Add(new XElement("Email", newUser.Email));
-                    newUserElement.Add(new XElement("UserName", newUser.UserName));
-                    newUserElement.Add(new XElement("Password", newUser.Password));
-                    newUserElement.Add(new XElement("Admin", admin));
+                        // Create a new user element
+                        XElement newUserElement = new XElement("User");
+                        newUserElement.Add(new XElement("FirstName", newUser.FirstName));
+                        newUserElement.Add(new XElement("LastName", newUser.LastName));
+                        newUserElement.Add(new XElement("Email", newUser.Email));
+                        newUserElement.Add(new XElement("UserName", newUser.UserName));
+                        newUserElement.Add(new XElement("Password", newUser.Password));
+                        newUserElement.Add(new XElement("Admin", "true"));
 
-                    // Add the new user element to the existing Users element
-                    xDoc.Element("Users").Add(newUserElement);
+                        // Add the new user element to the existing Users element
+                        xDoc.Element("Users").Add(newUserElement);
 
-                    // Save the modified XML back to the file
-                    xDoc.Save(fLocation);
+                        // Save the modified XML back to the file
+                        xDoc.Save(AdminLocation);
+                    }
+                    else
+                    {
+                        // If the file doesn't exist, create a new XML file with the new user
+                        fS = new FileStream(AdminLocation, FileMode.Create);
+                        XmlTextWriter writer = new XmlTextWriter(fS, System.Text.Encoding.Unicode);
+                        writer.Formatting = Formatting.Indented;
+                        writer.WriteStartDocument();
+                        writer.WriteStartElement("Users");
+                        writer.WriteStartElement("User");
+                        writer.WriteElementString("FirstName", newUser.FirstName);
+                        writer.WriteElementString("LastName", newUser.LastName);
+                        writer.WriteElementString("Email", newUser.Email);
+                        writer.WriteElementString("UserName", newUser.UserName);
+                        writer.WriteElementString("Password", newUser.Password);
+                        writer.WriteElementString("Admin", string.Empty);
+                        writer.WriteEndElement();
+                        writer.WriteEndDocument();
+                        writer.Close();
+                    }
+
                 }
-                else
+                else if (!CheckBox1.Checked)
                 {
-                    // If the file doesn't exist, create a new XML file with the new user
-                    fS = new FileStream(fLocation, FileMode.Create);
-                    XmlTextWriter writer = new XmlTextWriter(fS, System.Text.Encoding.Unicode);
-                    writer.Formatting = Formatting.Indented;
-                    writer.WriteStartDocument();
-                    writer.WriteStartElement("Users");
-                    writer.WriteStartElement("User");
-                    writer.WriteElementString("FirstName", newUser.FirstName);
-                    writer.WriteElementString("LastName", newUser.LastName);
-                    writer.WriteElementString("Email", newUser.Email);
-                    writer.WriteElementString("UserName", newUser.UserName);
-                    writer.WriteElementString("Password", newUser.Password);
-                    writer.WriteElementString("admin", admin);
-                    writer.WriteEndElement();
-                    writer.WriteEndDocument();
-                    writer.Close();
+
+
+                    // Check if the file exists
+                    if (File.Exists(fLocation))
+                    {
+                        // Read existing XML data
+                        XDocument xDoc = XDocument.Load(fLocation);
+
+                        // Create a new user element
+                        XElement newUserElement = new XElement("User");
+                        newUserElement.Add(new XElement("FirstName", newUser.FirstName));
+                        newUserElement.Add(new XElement("LastName", newUser.LastName));
+                        newUserElement.Add(new XElement("Email", newUser.Email));
+                        newUserElement.Add(new XElement("UserName", newUser.UserName));
+                        newUserElement.Add(new XElement("Password", newUser.Password));
+
+
+                        // Add the new user element to the existing Users element
+                        xDoc.Element("Users").Add(newUserElement);
+
+                        // Save the modified XML back to the file
+                        xDoc.Save(fLocation);
+                    }
+                    else
+                    {
+                        // If the file doesn't exist, create a new XML file with the new user
+                        fS = new FileStream(fLocation, FileMode.Create);
+                        XmlTextWriter writer = new XmlTextWriter(fS, System.Text.Encoding.Unicode);
+                        writer.Formatting = Formatting.Indented;
+                        writer.WriteStartDocument();
+                        writer.WriteStartElement("Users");
+                        writer.WriteStartElement("User");
+                        writer.WriteElementString("FirstName", newUser.FirstName);
+                        writer.WriteElementString("LastName", newUser.LastName);
+                        writer.WriteElementString("Email", newUser.Email);
+                        writer.WriteElementString("UserName", newUser.UserName);
+                        writer.WriteElementString("Password", newUser.Password);
+
+                        writer.WriteEndElement();
+                        writer.WriteEndDocument();
+                        writer.Close();
+                    }
                 }
             }
             finally
             {
                 // Close the file stream
-                if (fS != null)
-                {
-                    fS.Close();
-                }
+                fS?.Close();
             }
 
             // Redirect to the desired page
@@ -177,17 +220,11 @@ namespace UrbanNavigator.usercontrols
         }
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
-            
-            if (CheckBox1.Checked){ 
-                admin = "true"; }
-            else
-            {
-                 admin = "false";
-            }
-            
+            CheckBox1.Checked = true;
+
         }
 
     }
-    
-    
+
+
 }

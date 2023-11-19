@@ -1,7 +1,13 @@
 ﻿using Hashing;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.ServiceModel;
+using System.Web;
 using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using System.Xml;
 
 namespace UrbanNavigator.usercontrols
@@ -15,20 +21,20 @@ namespace UrbanNavigator.usercontrols
 
         }
 
-        protected void Btn_Login_Click(object sender, EventArgs e)
+        protected void btn_Login_Click(object sender, EventArgs e)
         {
-            string uname = HashingUtils.HashString(txt_Username.Text);
-            string pswrd = HashingUtils.HashString(txt_password.Text);
-            if (myAuthenticate(uname, pswrd))
+            string uname=HashingUtils.HashString(txt_Username.Text);
+            string pswrd=HashingUtils.HashString(txt_password.Text);
+            bool administrator = true;
+            if(myAuthenticate(uname, pswrd))
             {
                 FormsAuthentication.RedirectFromLoginPage(txt_Username.Text, false);
             }
-            else Label1.Text = "Invalid login";
+            else  Label1.Text = "Invalid login";
 
 
-            bool myAuthenticate(string username, string password)
-            {
-                string fLocation = Path.Combine(Request.PhysicalApplicationPath, @"App_Data/Members.xml");
+            bool myAuthenticate(string username, string password) { 
+            string fLocation = Path.Combine(Request.PhysicalApplicationPath,@"App_Data/user.xml");
                 if (File.Exists(fLocation))
                 {
                     FileStream FS = new FileStream(fLocation, FileMode.Open);
@@ -48,7 +54,7 @@ namespace UrbanNavigator.usercontrols
                         {
                             // Check if the passwords match
                             // You might need to implement hashing here to compare hashed passwords
-                            if (pswrd == xmlPassword)
+                            if (pswrd == xmlPassword && xmlAdmin == administrator)
                             {
                                 // Authentication successful
                                 return true;
@@ -61,14 +67,17 @@ namespace UrbanNavigator.usercontrols
                         }
                     }
                 }
+                else
+                {
 
-
-                return false;
+                }
+                
+                 return false;
             }
 
         }
 
-        protected void Btn_cancel_Click(object sender, EventArgs e)
+        protected void btn_cancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("default.aspx");
         }

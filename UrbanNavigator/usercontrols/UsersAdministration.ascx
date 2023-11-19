@@ -9,7 +9,7 @@
          </div> 
          <asp:Label ID="Output" RunAt="server" style="color:azure"/>
          <br />
-         <asp:Button ID="user" runat="server" CssClass="btn" Text="Get Users" OnClick="user_Click" style="width:200px" />
+         <asp:Button ID="user" runat="server" CssClass="btn" Text="Get Users" OnClick="User_Click" style="width:200px" />
          <br />
          <br />
             <!-- ListBox to display XML data -->

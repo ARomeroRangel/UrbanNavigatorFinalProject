@@ -165,7 +165,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\cities.json" />
     <Content Include="admin\Web.config" />
     <None Include="Connected Services\citycompareservice\configuration91.svcinfo" />
     <None Include="Connected Services\citycompareservice\configuration.svcinfo" />
@@ -173,7 +172,8 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="App_Data\user.xml" />
+    <Content Include="App_Data\Members.xml" />
+    <Content Include="App_Data\Staff.xml" />
     <Content Include="armandoServices\citycompare.ascx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.min.css" />

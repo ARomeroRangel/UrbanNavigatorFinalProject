@@ -166,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\Web.config" />
+    <Content Include="Stafflogin.aspx" />
     <None Include="Connected Services\citycompareservice\configuration91.svcinfo" />
     <None Include="Connected Services\citycompareservice\configuration.svcinfo" />
     <None Include="Connected Services\citycompareservice\Reference.svcmap">
@@ -196,6 +197,7 @@
     <Content Include="protected\members.aspx" />
     <Content Include="usercontrols\logout.ascx" />
     <Content Include="usercontrols\registration.ascx" />
+    <Content Include="usercontrols\staffloginform.ascx" />
     <Content Include="usercontrols\UsersAdministration.ascx" />
     <Content Include="usercontrols\loginform.ascx" />
     <Content Include="Web.config" />
@@ -257,6 +259,13 @@
     <Compile Include="usercontrols\registration.ascx.designer.cs">
       <DependentUpon>registration.ascx</DependentUpon>
     </Compile>
+    <Compile Include="usercontrols\staffloginform.ascx.cs">
+      <DependentUpon>staffloginform.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrols\staffloginform.ascx.designer.cs">
+      <DependentUpon>staffloginform.ascx</DependentUpon>
+    </Compile>
     <Compile Include="usercontrols\UsersAdministration.ascx.cs">
       <DependentUpon>UsersAdministration.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -270,6 +279,13 @@
     </Compile>
     <Compile Include="usercontrols\loginform.ascx.designer.cs">
       <DependentUpon>loginform.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Stafflogin.aspx.cs">
+      <DependentUpon>Stafflogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stafflogin.aspx.designer.cs">
+      <DependentUpon>Stafflogin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

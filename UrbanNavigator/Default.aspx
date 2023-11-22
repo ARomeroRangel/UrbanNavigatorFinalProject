@@ -64,7 +64,7 @@
                          <li><a href="#about" class="smoothScroll">About us</a></li>
                          <li><a href="#pricing" class="smoothScroll">Pricing</a></li>
                          <li><a href="#contact" class="smoothScroll">Contact</a></li>
-                        <li><a href="protected/members.aspx" class="smoothScroll">Memebers</a></li>
+                        <li><a href="protected/members.aspx" class="smoothScroll">Members</a></li>
                         <li><a href="admin/administrator.aspx" class="smoothScroll">Admin</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -203,8 +203,10 @@ A software engineering master's student with a B.S. in management information sy
                          <div class="team-thumb">
                               <div class="team-info team-thumb-down">
                                    <h2>Jerome Ronquillo</h2>
-                                   <small>Title</small>
-                                   <p>information.</p>
+                                   <small>Software Engineering MS Student</small>
+                                   <p>Dedicated to staying up-to-date with the latest technologies and proven track record of 
+                                       successfully delivering high-quality software products, collaborating with
+                                       cross-functional teams, and driving technical excellence.</p>
                               </div>
                               <img src="images/team-image2.jpg" class="img-responsive" alt="Catherine Soft">
                          </div>

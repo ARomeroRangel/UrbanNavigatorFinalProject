@@ -11,6 +11,7 @@
    <asp:TextBox runat="server" ID="txt_password" TextMode="Password" placeholder="Enter Password" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
    <asp:Button runat="server" ID="btn_Login" CssClass="lgnbtn" Text="Login" OnClick="Btn_Login_Click"  UseSubmitBehavior="False" />
    <asp:Button ID="btn_cancel" CssClass="cnbtn" runat="server" Text="Cancel" OnClick="Btn_cancel_Click" UseSubmitBehavior="False"  /><br />
+   <a href="../Default.aspx#ScriptManager1">Not a member? Register Here.</a><br />
    <asp:Label ID="Label1" runat="server" style="color:red"></asp:Label>
 
     

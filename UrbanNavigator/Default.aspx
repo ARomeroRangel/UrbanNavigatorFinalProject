@@ -64,7 +64,7 @@
                          <li><a href="#about" class="smoothScroll">About us</a></li>
                          <li><a href="#pricing" class="smoothScroll">Pricing</a></li>
                          <li><a href="#contact" class="smoothScroll">Contact</a></li>
-                        <li><a href="login.aspx" class="smoothScroll">Memebers</a></li>
+                        <li><a href="login.aspx" class="smoothScroll">Members</a></li>
                         <li><a href="admin/administrator.aspx" class="smoothScroll">Admin</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">

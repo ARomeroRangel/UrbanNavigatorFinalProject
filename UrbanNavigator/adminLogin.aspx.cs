@@ -1,38 +1,33 @@
 ﻿using Hashing;
 using System;
-using System.Web;
 using System.IO;
 using System.Web.Security;
 using System.Xml;
 
-namespace UrbanNavigator.usercontrols
+namespace UrbanNavigator
 {
-    public partial class WebUserControl1 : System.Web.UI.UserControl
+    public partial class WebForm3 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            txt_Username.Attributes.Add("onkeydown", "return (event.keyCode!=13);");
-            txt_password.Attributes.Add("onkeydown", "return (event.keyCode!=13);");
 
         }
 
-        protected void Btn_Login_Click(object sender, EventArgs e)
+
+        protected void Btn_Click(object sender, EventArgs e)
         {
             string uname = HashingUtils.HashString(txt_Username.Text);
             string pswrd = HashingUtils.HashString(txt_password.Text);
             if (myAuthenticate(uname, pswrd))
             {
-                createCookie(txt_Username.Text);
                 FormsAuthentication.RedirectFromLoginPage(txt_Username.Text, false);
-                Response.Redirect("/protected/members.aspx");
             }
             else Label1.Text = "Invalid login";
 
 
-
             bool myAuthenticate(string username, string password)
             {
-                string fLocation = Path.Combine(Request.PhysicalApplicationPath, @"App_Data/Members.xml");
+                string fLocation = Path.Combine(Request.PhysicalApplicationPath, @"App_Data/Staff.xml");
                 if (File.Exists(fLocation))
                 {
                     FileStream FS = new FileStream(fLocation, FileMode.Open);
@@ -61,7 +56,6 @@ namespace UrbanNavigator.usercontrols
                             else
                             {
                                 Label1.Text = "Invalid UserName/Password";
-                                return false;
                             }
                         }
                     }
@@ -70,20 +64,6 @@ namespace UrbanNavigator.usercontrols
 
                 return false;
             }
-
-            void createCookie(string username)
-            {
-                HttpCookie loginCookies = new HttpCookie("loginCookie");
-                loginCookies["uname"] = username;
-                loginCookies["loginTime"] = DateTime.Now.ToString();
-                Response.Cookies.Add(loginCookies);
-            }
-
-        }
-
-        protected void Btn_cancel_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("default.aspx");
         }
     }
 }

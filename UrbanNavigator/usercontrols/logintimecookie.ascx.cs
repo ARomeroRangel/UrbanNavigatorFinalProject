@@ -1,16 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
-namespace UrbanNavigator
+namespace UrbanNavigator.usercontrols
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class logintime : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             HttpCookie loginCookie = Request.Cookies["loginCookie"];
             if ((loginCookie == null) || loginCookie["name"] == "")
             {
-               // do nothing
+                // do nothing
 
             }
             else
@@ -18,13 +22,12 @@ namespace UrbanNavigator
                 string username, loginTime;
                 username = loginCookie["uname"];
                 loginTime = loginCookie["loginTime"];
-                if(loginText != null)
+                if (lbllogintime != null)
                 {
-                    loginText.Text = "<a href='login.aspx' class=''>Welcome,  " + username + "</a><br />" +
-                    "<span>Logged-In since: <br /> " + loginTime;
+                    lbllogintime.Text = "Logged-In since: <br /> " + loginTime;
                 }
-                
-                
+
+
             }
         }
     }

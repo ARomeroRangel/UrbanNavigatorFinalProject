@@ -13,6 +13,7 @@ namespace UrbanNavigator.usercontrols
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             FormsAuthentication.SignOut();
+            Response.Cookies["loginCookie"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect("~/Default.aspx");
         }
 

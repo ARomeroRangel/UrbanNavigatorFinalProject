@@ -204,6 +204,7 @@
     <Content Include="js\smoothscroll.js" />
     <Content Include="admin\administrator.aspx" />
     <Content Include="protected\members.aspx" />
+    <Content Include="usercontrols\logintimecookie.ascx" />
     <Content Include="usercontrols\logout.ascx" />
     <Content Include="usercontrols\registration.ascx" />
     <Content Include="usercontrols\staffloginform.ascx" />
@@ -272,6 +273,13 @@
     </Compile>
     <Compile Include="protected\members.aspx.designer.cs">
       <DependentUpon>members.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\logintimecookie.ascx.cs">
+      <DependentUpon>logintimecookie.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrols\logintimecookie.ascx.designer.cs">
+      <DependentUpon>logintimecookie.ascx</DependentUpon>
     </Compile>
     <Compile Include="usercontrols\logout.ascx.cs">
       <DependentUpon>logout.ascx</DependentUpon>

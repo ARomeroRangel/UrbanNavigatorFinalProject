@@ -68,7 +68,7 @@
                         <li><a href="admin/administrator.aspx" class="smoothScroll">Admin</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><asp:Label ID="loginText" runat="server"><a href="login.aspx" class="smoothScroll">LogIn</a></asp:Label></li>
+                        <li class="login-message"><asp:Label ID="loginText" runat="server"><a href="login.aspx" class="smoothScroll">LogIn</a></asp:Label></li>
                     
                          
                     </ul>

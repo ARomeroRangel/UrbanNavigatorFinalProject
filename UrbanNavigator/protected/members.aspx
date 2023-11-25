@@ -3,6 +3,7 @@
 <%@ Register TagPrefix="cse" TagName="citycompare" Src="~/armandoServices/citycompare.ascx"%>
 <%@ Register TagPrefix="cse" TagName="newsfocus" Src="~/jeromeServices/newsfocus.ascx"%>
 <%@ Register TagPrefix="cse" TagName="fbidata" Src="~/jeromeServices/FBIdata.ascx"%>
+<%@ Register TagPrefix="cse" TagName="logintimecookie" Src="~/usercontrols/logintimecookie.ascx"%>
 <%@ Register TagPrefix="cse" TagName="logout" Src="~/usercontrols/logout.ascx" %>
 
 <!DOCTYPE html>
@@ -79,7 +80,13 @@
                               <%Response.Write("Hello " + Context.User.Identity.Name+",");%>
                             </a>
                         </li> 
-                         <li><cse:logout runat="server" /></li>
+                         <li>
+                             <cse:logout runat="server" />
+
+                         </li>
+                        <li class="login-message">
+                            <cse:logintimecookie runat="server" />
+                        </li>
                     </ul>
                     
                </div>

@@ -166,7 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\Web.config" />
-    <Content Include="css\adminlogin.css" />
     <None Include="Connected Services\FBIService\Service1.disco" />
     <None Include="Connected Services\FBIService\configuration91.svcinfo" />
     <None Include="Connected Services\FBIService\configuration.svcinfo" />
@@ -177,7 +176,6 @@
     <Content Include="jeromeServices\FBIdata.ascx" />
     <Content Include="jeromeServices\newsfocus.ascx" />
     <Content Include="Stafflogin.aspx" />
-    <Content Include="adminLogin.aspx" />
     <None Include="Connected Services\citycompareservice\configuration91.svcinfo" />
     <None Include="Connected Services\citycompareservice\configuration.svcinfo" />
     <None Include="Connected Services\citycompareservice\Reference.svcmap">
@@ -332,13 +330,6 @@
     </Compile>
     <Compile Include="Stafflogin.aspx.designer.cs">
       <DependentUpon>Stafflogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="adminLogin.aspx.cs">
-      <DependentUpon>adminLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="adminLogin.aspx.designer.cs">
-      <DependentUpon>adminLogin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

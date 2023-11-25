@@ -2,6 +2,7 @@
 <%@ Register TagPrefix="cse" TagName="registration" Src="~/usercontrols/registration.ascx"%>
 <%@ Register TagPrefix="cse" TagName="citycompare" Src="~/armandoServices/citycompare.ascx"%>
 <%@ Register TagPrefix="cse" TagName="newsfocus" Src="~/jeromeServices/newsfocus.ascx"%>
+<%@ Register TagPrefix="cse" TagName="fbidata" Src="~/jeromeServices/FBIdata.ascx"%>
 <%@ Register TagPrefix="cse" TagName="logout" Src="~/usercontrols/logout.ascx" %>
 
 <!DOCTYPE html>
@@ -106,8 +107,10 @@
                              <!-- Registration  User Control -->
                          </div>
                         <div class="news-info">
-                            
                             <cse:newsfocus runat="server" />
+                        </div>
+                        <div class="news-info">
+                            <cse:fbidata runat="server" />
                         </div>
                     </div>
 

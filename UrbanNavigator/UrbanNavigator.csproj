@@ -166,9 +166,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\Web.config" />
-    <Content Include="jeromeServices\FBIinfo.aspx" />
+    <None Include="Connected Services\FBIService\Service1.disco" />
+    <None Include="Connected Services\FBIService\configuration91.svcinfo" />
+    <None Include="Connected Services\FBIService\configuration.svcinfo" />
+    <None Include="Connected Services\FBIService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="jeromeServices\FBIdata.ascx" />
     <Content Include="jeromeServices\newsfocus.ascx" />
-    <Content Include="jeromeServices\newsfocus.aspx" />
     <Content Include="Stafflogin.aspx" />
     <None Include="Connected Services\citycompareservice\configuration91.svcinfo" />
     <None Include="Connected Services\citycompareservice\configuration.svcinfo" />
@@ -219,12 +225,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="jeromeServices\FBIinfo.aspx.cs">
-      <DependentUpon>FBIinfo.aspx</DependentUpon>
+    <Compile Include="Connected Services\FBIService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="jeromeServices\FBIdata.ascx.cs">
+      <DependentUpon>FBIdata.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="jeromeServices\FBIinfo.aspx.designer.cs">
-      <DependentUpon>FBIinfo.aspx</DependentUpon>
+    <Compile Include="jeromeServices\FBIdata.ascx.designer.cs">
+      <DependentUpon>FBIdata.ascx</DependentUpon>
     </Compile>
     <Compile Include="jeromeServices\newsfocus.ascx.cs">
       <DependentUpon>newsfocus.ascx</DependentUpon>
@@ -232,13 +243,6 @@
     </Compile>
     <Compile Include="jeromeServices\newsfocus.ascx.designer.cs">
       <DependentUpon>newsfocus.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="jeromeServices\newsfocus.aspx.cs">
-      <DependentUpon>newsfocus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="jeromeServices\newsfocus.aspx.designer.cs">
-      <DependentUpon>newsfocus.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -319,6 +323,13 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <None Include="Connected Services\citycompareservice\Service1.wsdl" />
+    <None Include="Connected Services\FBIService\Service1.wsdl" />
+    <None Include="Connected Services\FBIService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FBIService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="protected\Web.config" />
     <None Include="Web.Debug.config">
@@ -334,6 +345,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\citycompareservice\" />
+    <WCFMetadataStorage Include="Connected Services\FBIService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

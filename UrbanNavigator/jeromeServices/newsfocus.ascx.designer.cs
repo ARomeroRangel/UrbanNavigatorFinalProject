@@ -15,15 +15,6 @@ namespace UrbanNavigator.jeromeServices
     {
 
         /// <summary>
-        /// TxtNewsTopic control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtNewsTopic;
-
-        /// <summary>
         /// TxtCity control.
         /// </summary>
         /// <remarks>
@@ -31,6 +22,15 @@ namespace UrbanNavigator.jeromeServices
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtCity;
+
+        /// <summary>
+        /// TxtNewsTopic control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtNewsTopic;
 
         /// <summary>
         /// Button1 control.
@@ -49,14 +49,5 @@ namespace UrbanNavigator.jeromeServices
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblNewsResult;
-
-        /// <summary>
-        /// LinkButton1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
     }
 }

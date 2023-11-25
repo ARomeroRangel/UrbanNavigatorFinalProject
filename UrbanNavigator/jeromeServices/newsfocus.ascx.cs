@@ -25,7 +25,7 @@ namespace UrbanNavigator.jeromeServices
 
                 var channel = new HttpClient { BaseAddress = new Uri(url) };
                 HttpResponseMessage response = channel.GetAsync("").Result;
-                // Make asyc call and put result in variable response for later
+                // Make async call and put result in variable response for later
                 string result = response.Content.ReadAsStringAsync().Result;
                 // Retrieve response from Result and display in LblNewResult
                 LblNewsResult.Text = result;

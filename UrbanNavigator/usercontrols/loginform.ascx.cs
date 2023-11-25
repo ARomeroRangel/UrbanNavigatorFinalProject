@@ -1,5 +1,6 @@
 ﻿using Hashing;
 using System;
+using System.Web;
 using System.IO;
 using System.Web.Security;
 using System.Xml;
@@ -21,6 +22,7 @@ namespace UrbanNavigator.usercontrols
             string pswrd = HashingUtils.HashString(txt_password.Text);
             if (myAuthenticate(uname, pswrd))
             {
+                createCookie(txt_Username.Text);
                 FormsAuthentication.RedirectFromLoginPage(txt_Username.Text, false);
                 Response.Redirect("/protected/members.aspx");
             }
@@ -59,6 +61,7 @@ namespace UrbanNavigator.usercontrols
                             else
                             {
                                 Label1.Text = "Invalid UserName/Password";
+                                return false;
                             }
                         }
                     }
@@ -66,6 +69,14 @@ namespace UrbanNavigator.usercontrols
 
 
                 return false;
+            }
+
+            void createCookie(string username)
+            {
+                HttpCookie loginCookies = new HttpCookie("loginCookie");
+                loginCookies["uname"] = username;
+                loginCookies["loginTime"] = DateTime.Now.ToString();
+                Response.Cookies.Add(loginCookies);
             }
 
         }

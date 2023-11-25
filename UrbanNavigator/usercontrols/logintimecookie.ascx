@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="logintimecookie.ascx.cs" Inherits="UrbanNavigator.usercontrols.logintime" %>
+<asp:Label ID="lbllogintime" runat="server" Text="login-time"></asp:Label>

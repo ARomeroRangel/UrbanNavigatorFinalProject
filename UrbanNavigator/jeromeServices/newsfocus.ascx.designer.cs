@@ -7,47 +7,47 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UrbanNavigator
+namespace UrbanNavigator.jeromeServices
 {
 
 
-    public partial class WebForm1
+    public partial class newsfocus1
     {
 
         /// <summary>
-        /// form1 control.
+        /// TxtCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox TxtCity;
 
         /// <summary>
-        /// loginText control.
+        /// TxtNewsTopic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label loginText;
+        protected global::System.Web.UI.WebControls.TextBox TxtNewsTopic;
 
         /// <summary>
-        /// ScriptManager1 control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// UpdatePanel1 control.
+        /// LblNewsResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.Label LblNewsResult;
     }
 }

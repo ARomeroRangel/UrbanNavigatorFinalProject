@@ -44,7 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Hashing">
-      <HintPath>..\Hashing\Hashing\bin\Debug\Hashing.dll</HintPath>
+      <HintPath>..\Hashing\Hashing\obj\Debug\Hashing.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -166,9 +166,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\Web.config" />
-    <Content Include="css\adminlogin.css" />
+    <None Include="Connected Services\FBIService\Service1.disco" />
+    <None Include="Connected Services\FBIService\configuration91.svcinfo" />
+    <None Include="Connected Services\FBIService\configuration.svcinfo" />
+    <None Include="Connected Services\FBIService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="jeromeServices\FBIdata.ascx" />
+    <Content Include="jeromeServices\newsfocus.ascx" />
     <Content Include="Stafflogin.aspx" />
-    <Content Include="adminLogin.aspx" />
     <None Include="Connected Services\citycompareservice\configuration91.svcinfo" />
     <None Include="Connected Services\citycompareservice\configuration.svcinfo" />
     <None Include="Connected Services\citycompareservice\Reference.svcmap">
@@ -197,8 +204,10 @@
     <Content Include="js\smoothscroll.js" />
     <Content Include="admin\administrator.aspx" />
     <Content Include="protected\members.aspx" />
+    <Content Include="usercontrols\logintimecookie.ascx" />
     <Content Include="usercontrols\logout.ascx" />
     <Content Include="usercontrols\registration.ascx" />
+    <Content Include="usercontrols\sessionsearchedcities.ascx" />
     <Content Include="usercontrols\staffloginform.ascx" />
     <Content Include="usercontrols\UsersAdministration.ascx" />
     <Content Include="usercontrols\loginform.ascx" />
@@ -217,6 +226,25 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\FBIService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="jeromeServices\FBIdata.ascx.cs">
+      <DependentUpon>FBIdata.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jeromeServices\FBIdata.ascx.designer.cs">
+      <DependentUpon>FBIdata.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="jeromeServices\newsfocus.ascx.cs">
+      <DependentUpon>newsfocus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jeromeServices\newsfocus.ascx.designer.cs">
+      <DependentUpon>newsfocus.ascx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -247,6 +275,13 @@
     <Compile Include="protected\members.aspx.designer.cs">
       <DependentUpon>members.aspx</DependentUpon>
     </Compile>
+    <Compile Include="usercontrols\logintimecookie.ascx.cs">
+      <DependentUpon>logintimecookie.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrols\logintimecookie.ascx.designer.cs">
+      <DependentUpon>logintimecookie.ascx</DependentUpon>
+    </Compile>
     <Compile Include="usercontrols\logout.ascx.cs">
       <DependentUpon>logout.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -260,6 +295,13 @@
     </Compile>
     <Compile Include="usercontrols\registration.ascx.designer.cs">
       <DependentUpon>registration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\sessionsearchedcities.ascx.cs">
+      <DependentUpon>sessionsearchedcities.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrols\sessionsearchedcities.ascx.designer.cs">
+      <DependentUpon>sessionsearchedcities.ascx</DependentUpon>
     </Compile>
     <Compile Include="usercontrols\staffloginform.ascx.cs">
       <DependentUpon>staffloginform.ascx</DependentUpon>
@@ -289,13 +331,6 @@
     <Compile Include="Stafflogin.aspx.designer.cs">
       <DependentUpon>Stafflogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="adminLogin.aspx.cs">
-      <DependentUpon>adminLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="adminLogin.aspx.designer.cs">
-      <DependentUpon>adminLogin.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\fontawesome-webfont.eot" />
@@ -304,6 +339,13 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <None Include="Connected Services\citycompareservice\Service1.wsdl" />
+    <None Include="Connected Services\FBIService\Service1.wsdl" />
+    <None Include="Connected Services\FBIService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FBIService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="protected\Web.config" />
     <None Include="Web.Debug.config">
@@ -319,6 +361,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\citycompareservice\" />
+    <WCFMetadataStorage Include="Connected Services\FBIService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

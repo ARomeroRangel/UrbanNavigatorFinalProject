@@ -166,6 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\Web.config" />
+    <Content Include="jeromeServices\FBIinfo.aspx" />
+    <Content Include="jeromeServices\newsfocus.ascx" />
+    <Content Include="jeromeServices\newsfocus.aspx" />
     <Content Include="Stafflogin.aspx" />
     <None Include="Connected Services\citycompareservice\configuration91.svcinfo" />
     <None Include="Connected Services\citycompareservice\configuration.svcinfo" />
@@ -215,6 +218,27 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="jeromeServices\FBIinfo.aspx.cs">
+      <DependentUpon>FBIinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jeromeServices\FBIinfo.aspx.designer.cs">
+      <DependentUpon>FBIinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jeromeServices\newsfocus.ascx.cs">
+      <DependentUpon>newsfocus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jeromeServices\newsfocus.ascx.designer.cs">
+      <DependentUpon>newsfocus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="jeromeServices\newsfocus.aspx.cs">
+      <DependentUpon>newsfocus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jeromeServices\newsfocus.aspx.designer.cs">
+      <DependentUpon>newsfocus.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

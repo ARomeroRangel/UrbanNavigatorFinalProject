@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="members.aspx.cs" Inherits="UrbanNavigator.WebForm1" %>
 <%@ Register TagPrefix="cse" TagName="registration" Src="~/usercontrols/registration.ascx"%>
 <%@ Register TagPrefix="cse" TagName="citycompare" Src="~/armandoServices/citycompare.ascx"%>
+<%@ Register TagPrefix="cse" TagName="newsfocus" Src="~/jeromeServices/newsfocus.ascx"%>
 <%@ Register TagPrefix="cse" TagName="logout" Src="~/usercontrols/logout.ascx" %>
 
 <!DOCTYPE html>
@@ -104,9 +105,14 @@
                              </asp:UpdatePanel>
                              <!-- Registration  User Control -->
                          </div>
+                        <div class="news-info">
+                            
+                            <cse:newsfocus runat="server" />
+                        </div>
                     </div>
 
                </div>
+              
           </div>
      </section>
 

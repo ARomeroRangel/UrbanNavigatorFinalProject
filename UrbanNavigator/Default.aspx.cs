@@ -15,10 +15,10 @@ namespace UrbanNavigator
             }
             else
             {
-                string username;
+                /*string username;
                 username = loginCookie["uname"];
                 loginText.Text = "<a href='login.aspx' class='smoothScroll'>Welcome,  "+ username + "</a>";
-
+                */
             }
         }
     }

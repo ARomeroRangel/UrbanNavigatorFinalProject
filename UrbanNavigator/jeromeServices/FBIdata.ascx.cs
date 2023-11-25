@@ -27,13 +27,18 @@ namespace UrbanNavigator.jeromeServices
                 string result = myprxy.FBICrimeData(ORI, offense);
                 string resultMessage = "FBI reports "+ result + " " + offense + " incidents in " + TxtCityName.Text + " between 2019 and 2023";
                 LblFBIresults.Text = resultMessage;
+
+                int num = Session.Count + 1;
+                //Session["City" + num.ToString()] = city1;
+                Session.Add("City" + num.ToString(), TxtCityName.Text);
+
             }
             
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LblFBIresults.Text = DropDownList1.SelectedItem.ToString();
+           
         }
     }
 }

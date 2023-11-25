@@ -4,6 +4,7 @@
 <%@ Register TagPrefix="cse" TagName="newsfocus" Src="~/jeromeServices/newsfocus.ascx"%>
 <%@ Register TagPrefix="cse" TagName="fbidata" Src="~/jeromeServices/FBIdata.ascx"%>
 <%@ Register TagPrefix="cse" TagName="logintimecookie" Src="~/usercontrols/logintimecookie.ascx"%>
+<%@ Register TagPrefix="cse" TagName="sessionsearchedcities" Src="~/usercontrols/sessionsearchedcities.ascx"%>
 <%@ Register TagPrefix="cse" TagName="logout" Src="~/usercontrols/logout.ascx" %>
 
 <!DOCTYPE html>
@@ -119,6 +120,11 @@
                         <div class="news-info">
                             <cse:fbidata runat="server" />
                         </div>
+                        <div class="news-info">
+                            <cse:sessionsearchedcities runat="server" />
+                        </div>
+
+
                     </div>
 
                </div>

@@ -29,6 +29,12 @@ namespace UrbanNavigator.jeromeServices
                 string result = response.Content.ReadAsStringAsync().Result;
                 // Retrieve response from Result and display in LblNewResult
                 LblNewsResult.Text = result;
+
+                int num = Session.Count + 1;
+                //Session["City" + num.ToString()] = city1;
+                Session.Add("City" + num.ToString(), TxtCity.Text);
+
+                Response.Redirect("Default.aspx");
             }
             else
             {

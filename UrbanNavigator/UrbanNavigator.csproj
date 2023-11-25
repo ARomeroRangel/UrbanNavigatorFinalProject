@@ -207,6 +207,7 @@
     <Content Include="usercontrols\logintimecookie.ascx" />
     <Content Include="usercontrols\logout.ascx" />
     <Content Include="usercontrols\registration.ascx" />
+    <Content Include="usercontrols\sessionsearchedcities.ascx" />
     <Content Include="usercontrols\staffloginform.ascx" />
     <Content Include="usercontrols\UsersAdministration.ascx" />
     <Content Include="usercontrols\loginform.ascx" />
@@ -294,6 +295,13 @@
     </Compile>
     <Compile Include="usercontrols\registration.ascx.designer.cs">
       <DependentUpon>registration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\sessionsearchedcities.ascx.cs">
+      <DependentUpon>sessionsearchedcities.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrols\sessionsearchedcities.ascx.designer.cs">
+      <DependentUpon>sessionsearchedcities.ascx</DependentUpon>
     </Compile>
     <Compile Include="usercontrols\staffloginform.ascx.cs">
       <DependentUpon>staffloginform.ascx</DependentUpon>

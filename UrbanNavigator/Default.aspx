@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="UrbanNavigator.WebForm1" %>
 <%@ Register TagPrefix="cse" TagName="registration" Src="~/usercontrols/registration.ascx"%>
+<%@ Register TagPrefix="cse" TagName="usercount" Src="~/usercontrols/usercount.ascx"%>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -356,7 +357,7 @@ A software engineering master's student with a B.S. in management information sy
      <footer id="footer" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
-
+                   <cse:usercount runat="server" />
                     <div class="copyright-text col-md-12 col-sm-12">
                          <div class="col-md-6 col-sm-6">
                               <p>Copyright &copy; 2023 UrbanNavigator - Armando Romero & Jerome Ronquillo</p>

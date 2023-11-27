@@ -173,6 +173,8 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="App_Data\GlobalData.xml" />
+    <Content Include="Global.asax" />
     <Content Include="jeromeServices\FBIdata.ascx" />
     <Content Include="jeromeServices\newsfocus.ascx" />
     <Content Include="Stafflogin.aspx" />
@@ -211,6 +213,7 @@
     <Content Include="usercontrols\staffloginform.ascx" />
     <Content Include="usercontrols\UsersAdministration.ascx" />
     <Content Include="usercontrols\loginform.ascx" />
+    <Content Include="usercontrols\usercount.ascx" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
   </ItemGroup>
@@ -231,6 +234,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="jeromeServices\FBIdata.ascx.cs">
       <DependentUpon>FBIdata.ascx</DependentUpon>
@@ -330,6 +336,13 @@
     </Compile>
     <Compile Include="Stafflogin.aspx.designer.cs">
       <DependentUpon>Stafflogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\usercount.ascx.cs">
+      <DependentUpon>usercount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrols\usercount.ascx.designer.cs">
+      <DependentUpon>usercount.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -16,6 +16,10 @@ namespace UrbanNavigator.armandoServices
             string result = mypxy.GetData(City1.Text, City2.Text);
             result1.Text = result;
 
+            int num = Session.Count + 1;
+            Session.Add("City" + num.ToString(), City1.Text);
+            Session.Add("City" + (num+1).ToString(), City2.Text);
+
         }
 
     }

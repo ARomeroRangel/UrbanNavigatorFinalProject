@@ -104,7 +104,7 @@
 
                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                          <div class="home-info">
-                              <h3>Members Services</h3>
+                              <h3>City Comparison Tool:</h3>
                              <!-- Registration  User Control -->
                              <asp:ScriptManager ID="ScriptManager5" runat="server"></asp:ScriptManager>
                              <asp:UpdatePanel ID="UpdatePanel5" runat="server">

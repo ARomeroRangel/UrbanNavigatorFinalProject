@@ -339,7 +339,7 @@ A software engineering master's student with a B.S. in management information sy
      </section>   
 
 
-     <!-- CONTACT -->
+<%--     <!-- CONTACT -->
      <section id="contact" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
@@ -350,7 +350,7 @@ A software engineering master's student with a B.S. in management information sy
 
                </div>
           </div>
-     </section>       
+     </section>       --%>
 
 
      <!-- FOOTER -->

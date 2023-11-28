@@ -10,7 +10,7 @@ namespace UrbanNavigator.usercontrols
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // Image1.ImageUrl = "~/imagePro.aspx";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -88,9 +88,6 @@ namespace UrbanNavigator.usercontrols
                 }
             }
 
-            // 
-
-
 
 
             Boolean userNameCheck(string username)
@@ -136,5 +133,7 @@ namespace UrbanNavigator.usercontrols
 
 
         }
+
     }
+
 }

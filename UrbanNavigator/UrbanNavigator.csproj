@@ -166,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\Web.config" />
+    <None Include="Connected Services\MyImageService1\configuration91.svcinfo" />
+    <None Include="Connected Services\MyImageService1\configuration.svcinfo" />
+    <None Include="Connected Services\MyImageService1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Connected Services\FBIService\Service1.disco" />
     <None Include="Connected Services\FBIService\configuration91.svcinfo" />
     <None Include="Connected Services\FBIService\configuration.svcinfo" />
@@ -174,6 +180,13 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="App_Data\GlobalData.xml" />
+    <None Include="Connected Services\MyImageService1\Service.wsdl" />
+    <None Include="Connected Services\MyImage\configuration91.svcinfo" />
+    <None Include="Connected Services\MyImage\configuration.svcinfo" />
+    <None Include="Connected Services\MyImage\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Global.asax" />
     <Content Include="jeromeServices\FBIdata.ascx" />
     <Content Include="jeromeServices\newsfocus.ascx" />
@@ -231,6 +244,16 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\FBIService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MyImageService1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MyImage\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -359,6 +382,7 @@
     <None Include="Connected Services\FBIService\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\MyImage\Service.wsdl" />
     <None Include="packages.config" />
     <Content Include="protected\Web.config" />
     <None Include="Web.Debug.config">
@@ -375,6 +399,8 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\citycompareservice\" />
     <WCFMetadataStorage Include="Connected Services\FBIService\" />
+    <WCFMetadataStorage Include="Connected Services\MyImageService1\" />
+    <WCFMetadataStorage Include="Connected Services\MyImage\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

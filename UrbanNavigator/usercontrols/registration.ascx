@@ -9,7 +9,24 @@
 
 <br />
 <br />
-<asp:Button CssClass="section-btn" ID="Button1" runat="server" Text="Get Started" OnClick="Button1_Click" />
+<br />
 <br />
 
+
+<asp:Button CssClass="section-btn" ID="Button1" runat="server" Text="Register" Visible="false" OnClick="Button1_Click" />
+
+
 <asp:Label ID="Label1" runat="server" Text="" style="color:red"></asp:Label>
+
+
+
+<style>
+    .captcha{
+      display:flex;
+      flex-direction:column;
+    
+      align-items:center;
+
+        
+    }
+</style>

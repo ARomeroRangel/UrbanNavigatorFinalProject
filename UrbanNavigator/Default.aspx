@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="UrbanNavigator.WebForm1" %>
 <%@ Register TagPrefix="cse" TagName="registration" Src="~/usercontrols/registration.ascx"%>
 <%@ Register TagPrefix="cse" TagName="usercount" Src="~/usercontrols/usercount.ascx"%>
+<%@ Register TagPrefix="cse" TagName="verify" Src="~/usercontrols/ImageVerifier.ascx" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -94,6 +95,7 @@
                              <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                              <ContentTemplate>
                              <cse:registration runat="server" />
+                             <cse:verify runat="server" />
                              </ContentTemplate>
                              </asp:UpdatePanel>
                              <!-- Registration  User Control -->
@@ -339,7 +341,7 @@ A software engineering master's student with a B.S. in management information sy
      </section>   
 
 
-     <!-- CONTACT -->
+<%--     <!-- CONTACT -->
      <section id="contact" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
@@ -350,7 +352,7 @@ A software engineering master's student with a B.S. in management information sy
 
                </div>
           </div>
-     </section>       
+     </section>       --%>
 
 
      <!-- FOOTER -->

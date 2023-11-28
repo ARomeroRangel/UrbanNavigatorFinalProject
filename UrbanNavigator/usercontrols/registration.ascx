@@ -9,7 +9,7 @@
 
 <br />
 <br />
-<asp:Button CssClass="section-btn" ID="Button1" runat="server" Text="Get Started" OnClick="Button1_Click" />
+<asp:Button CssClass="section-btn" ID="Button1" runat="server" visible="true" Text="Get Started" OnClick="Button1_Click" />
 <br />
 
 <asp:Label ID="Label1" runat="server" Text="" style="color:red"></asp:Label>

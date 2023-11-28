@@ -1,7 +1,7 @@
 ﻿using Hashing;
 using System;
-using System.Web;
 using System.IO;
+using System.Web;
 using System.Web.Security;
 using System.Xml;
 
@@ -24,7 +24,7 @@ namespace UrbanNavigator.usercontrols
             {
                 createCookie(txt_Username.Text);
                 FormsAuthentication.RedirectFromLoginPage(txt_Username.Text, false);
-                Response.Redirect("/protected/members.aspx");
+                Response.Redirect("~/protected/members.aspx");
             }
             else Label1.Text = "Invalid login";
 

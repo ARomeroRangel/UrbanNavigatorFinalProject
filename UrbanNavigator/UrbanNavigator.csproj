@@ -165,6 +165,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="adminLogin.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="admin\Web.config" />
     <None Include="Connected Services\FBIService\Service1.disco" />
     <None Include="Connected Services\FBIService\configuration91.svcinfo" />
@@ -174,10 +177,18 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="App_Data\GlobalData.xml" />
+    <None Include="Connected Services\MyImageService\configuration91.svcinfo" />
+    <None Include="Connected Services\MyImageService\configuration.svcinfo" />
+    <None Include="Connected Services\MyImageService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="css\adminlogin.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="jeromeServices\FBIdata.ascx" />
     <Content Include="jeromeServices\newsfocus.ascx" />
-    <Content Include="Stafflogin.aspx" />
     <None Include="Connected Services\citycompareservice\configuration91.svcinfo" />
     <None Include="Connected Services\citycompareservice\configuration.svcinfo" />
     <None Include="Connected Services\citycompareservice\Reference.svcmap">
@@ -218,6 +229,15 @@
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminLogin.aspx.cs">
+      <DependentUpon>adminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="adminLogin.aspx.designer.cs">
+      <DependentUpon>adminLogin.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="armandoServices\citycompare.ascx.cs">
       <DependentUpon>citycompare.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,6 +251,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\FBIService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MyImageService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -330,13 +355,6 @@
     <Compile Include="usercontrols\loginform.ascx.designer.cs">
       <DependentUpon>loginform.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Stafflogin.aspx.cs">
-      <DependentUpon>Stafflogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Stafflogin.aspx.designer.cs">
-      <DependentUpon>Stafflogin.aspx</DependentUpon>
-    </Compile>
     <Compile Include="usercontrols\usercount.ascx.cs">
       <DependentUpon>usercount.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -359,6 +377,7 @@
     <None Include="Connected Services\FBIService\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\MyImageService\Service.wsdl" />
     <None Include="packages.config" />
     <Content Include="protected\Web.config" />
     <None Include="Web.Debug.config">
@@ -375,6 +394,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\citycompareservice\" />
     <WCFMetadataStorage Include="Connected Services\FBIService\" />
+    <WCFMetadataStorage Include="Connected Services\MyImageService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
